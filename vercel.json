@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {"source":"/api/notifications/:notificationId/reprocess","destination":"/api/notifications?notificationId=:notificationId&action=reprocess"},
+    {"source":"/api/notifications/:notificationId","destination":"/api/notifications?notificationId=:notificationId"}
+  ]
+}
